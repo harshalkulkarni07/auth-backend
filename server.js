@@ -1,8 +1,10 @@
 const express = require("express");
 const connectDb = require("./config/dbConnection");
 const errorHandler = require("./middleware/errorHandler");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv");
 const cors = require('cors');
+
+dotenv.config();
 connectDb();
 const app = express();
 // Allow all origins, methods, and headers
